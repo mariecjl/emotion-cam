@@ -7,9 +7,11 @@ Architecture
   - fully connected layers (256 hidden units & drop out for regularization
   - cross-entropy loss
   - optimizer: adam
-
 - Alternative: MLP + MediaPipe Facemesh
-  - 
+  - Images fed into MediaPipe FaceMesh -> produces 478 facial landmarks (x, y, z)
+  - geometric normalization and flattening the landmark vectors
+  - MLP for emotion class prediction
+    - two blocks: linear -> ReLU -> dropout (0.3)
  
 
 
